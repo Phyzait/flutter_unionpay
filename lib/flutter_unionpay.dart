@@ -128,6 +128,13 @@ class FlutterUnionpay {
     return result;
   }
 
+  /// 获取智能终端设备信息接口
+  static Future<Map<String, dynamic>?> getBaseSysInfo() async {
+    final Map<String, dynamic>? result = (await _unionPayChannel
+        .send({"methodName": "getBaseSysInfo"})) as Map<String, dynamic>?;
+    return result;
+  }
+
   /// 开始打印
   /// todo 异常情况的处理，不然会导致打印机不响应的问题
   /// todo 考虑是否需要提前初始化设备
