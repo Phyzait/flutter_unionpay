@@ -130,8 +130,8 @@ class FlutterUnionpay {
 
   /// 获取智能终端设备信息接口
   static Future<Map<String, dynamic>?> getBaseSysInfo() async {
-    final Map<String, dynamic>? result = (await _unionPayChannel
-        .send({"methodName": "getBaseSysInfo"})) as Map<String, dynamic>?;
+    final Map<String, dynamic>? result =
+        await _unionPayChannel.invokeMapMethod("getBaseSysInfo");
     return result;
   }
 
