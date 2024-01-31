@@ -35,7 +35,7 @@ android {
 }
 
 dependencies {
-  implementation files('libs/sdk4upos_20210407.jar')
+  implementation files('libs/sdk4upos_20181010_mix.jar')
   implementation 'com.alibaba:fastjson:1.2.61'
   implementation 'com.alibaba:fastjson:1.1.71.android'
 }
