@@ -39,7 +39,7 @@ public class FlutterUnionpayPlugin implements FlutterPlugin, MethodCallHandler, 
 
     private final static String unionPayChannel = "freshFans/pos/unionPay";
     private BasicMessageChannel<Object> mMessageChannel;
-    private static final String APPID = "8a81c1bd89b6cadb018c7be4644612d9";
+    private static final String APPID = "29a7de1016e54929958b8993899ca401";
     //appid是交易时必传参数，appid与app包名一一对应，可在银商开发者平台申请。
 
     private Handler uiThreadHandler = new Handler(Looper.getMainLooper());
