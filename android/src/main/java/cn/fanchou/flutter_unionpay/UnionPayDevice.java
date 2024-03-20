@@ -145,14 +145,14 @@ public class UnionPayDevice {
    * */
   private String buildText() {
     //插入图片方式一：提前将图片转换成固定base64串，节省图片转base64时间，提高打印速度
-    String imageData = "data:base64;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";
+//    String imageData = "data:base64;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";
     //插入图片方式二：运行时再转换成base64
     //Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.ums);
     //String imageData = "data:base64;"+Base64Util.bitmapToBase64(bitmap);
     PrintScriptUtil psu = new PrintScriptUtil();
     psu.setNextFormat(ScriptConstant.NORMAL, ScriptConstant.NORMAL)
-      .addImage(ScriptConstant.CENTER, "284*81",imageData)
-      .text(ScriptConstant.LEFT,"商户名称:银行卡商户")
+//      .addImage(ScriptConstant.CENTER, "284*81",imageData)
+      .text(ScriptConstant.LEFT,"商户名称:")
       .text(ScriptConstant.LEFT, "商户编号:898330160120021")
       .text(ScriptConstant.LEFT, "终端编号:05315830")
       .text(ScriptConstant.LEFT, "班次号:201705070001 操作员号:001")
@@ -244,6 +244,9 @@ public class UnionPayDevice {
         break;
       case 12:
         text = model.orderGoodsHome(printInfo);
+        break;
+      case 13:
+        text = model.ticket(printInfo);
         break;
       default:
         text = buildText();
