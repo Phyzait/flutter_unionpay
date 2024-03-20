@@ -1558,12 +1558,12 @@ public class PrintModels {
         printer.setNextFormat(ScriptConstant.NORMAL, ScriptConstant.NORMAL)
                 .text(ScriptConstant.LEFT, "日期时段：" + data.get("session"));
 
-        printer.emptyLines(2);
+        printer.emptyLines(1);
         printer.addLine();
 
         printer.printTable(
-                new int[]{20, 8},
-                new String[]{ScriptConstant.CENTER, ScriptConstant.CENTER},
+                new int[]{12, 8, 8},
+                new String[]{ScriptConstant.CENTER, ScriptConstant.CENTER, ScriptConstant.CENTER},
                 new String[]{
                         "票名",
                         "单价",
@@ -1572,8 +1572,8 @@ public class PrintModels {
         );
         for (Map count : countList) {
             printer.printTable(
-                    new int[]{20, 8},
-                    new String[]{ScriptConstant.CENTER, ScriptConstant.CENTER},
+                    new int[]{12, 8, 8},
+                    new String[]{ScriptConstant.CENTER, ScriptConstant.CENTER, ScriptConstant.CENTER},
                     new String[]{
                             count.get("priceName") + "",
                             count.get("price") + "",
@@ -1582,10 +1582,9 @@ public class PrintModels {
             );
 
         }
-
-        printer.emptyLines(2);
         printer.addLine();
-        printer.emptyLines(2);
+
+        printer.emptyLines(1);
 
         return printer.getString();
     }
