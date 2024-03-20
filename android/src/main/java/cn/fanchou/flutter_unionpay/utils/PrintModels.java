@@ -1554,6 +1554,8 @@ public class PrintModels {
         printer.setNextFormat(ScriptConstant.NORMAL, ScriptConstant.NORMAL)
                 .text(ScriptConstant.LEFT, "支付金额：" + data.get("amount"));
         printer.setNextFormat(ScriptConstant.NORMAL, ScriptConstant.NORMAL)
+                .text(ScriptConstant.LEFT, "支付时间：" + data.get("payTime"));
+        printer.setNextFormat(ScriptConstant.NORMAL, ScriptConstant.NORMAL)
                 .text(ScriptConstant.LEFT, "日期时段：" + data.get("session"));
 
         printer.emptyLines(2);
@@ -1564,6 +1566,7 @@ public class PrintModels {
                 new String[]{ScriptConstant.CENTER, ScriptConstant.CENTER},
                 new String[]{
                         "票名",
+                        "单价",
                         "数量",
                 }
         );
@@ -1573,11 +1576,17 @@ public class PrintModels {
                     new String[]{ScriptConstant.CENTER, ScriptConstant.CENTER},
                     new String[]{
                             count.get("priceName") + "",
+                            count.get("price") + "",
                             count.get("count") + "",
                     }
             );
 
         }
+
+        printer.emptyLines(2);
+        printer.addLine();
+        printer.emptyLines(2);
+
         return printer.getString();
     }
 
